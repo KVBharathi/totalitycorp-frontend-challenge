@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>OZTAP</title>
+
+<link rel="shortcut icon" href="favicon.png">
+<!-- Bootstrap stylesheet -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<!-- icofont 
+<link href="css/icofont.css" rel="stylesheet" type="text/css" />-->
+<!-- crousel css -->
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+<!--bootstrap select-->
+<link href="css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+<!-- stylesheet -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="https://unpkg.com/@icon/icofont/icofont.css">
+<style>
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+
+  display: none;
+}
+#loadMore {
+
+
+  display: block;
+  text-align: center;
+  margin: 0px auto;
+  border: 1px solid #4173B8;
+  border: 1px solid transparent;
+
+  transition: .3s;
+}
+#loadMore:hover {
+
+  border: 1px solid #4173B8;
+  text-decoration: none;
+}
+.noContent {
+  color: #000 !important;
+  background-color: transparent !important;
+  pointer-events: none;
+  border: 1px solid #fff !important;
+  display:none;
+
+}
+.inputpop
+{
+margin: 0 auto;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+
+/*
+.modal {
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-dialog{
+    width: 100%;
+    height: 100vh;
+    margin: 0 !important;
+}*/
+.modal-content {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: auto;
+    bottom:0;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+/***************************************************/
+.panel-headingbg
+{
+	background:#4173B8;
+	color:#fff;
+	font-weight:600;
+}/*
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+*/
+.shadow-sm {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+}
+.rounded {
+    border-radius: .40rem!important;
+	margin: 0 auto;
+	text-align:center;
+}
+.nameitem
+{
+	padding: 10px 0px;
+    color: #000;
+	font-size: 13px;
+}
+.namebox{width:100%; padding:5px; padding-bottom: 0px;}
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5 !important;
+    border-color: #ddd !important;
+}
+.panel-default a{outline:none; text-decoration:none;}
+@media (min-width: 600px){
+.modal-content {
+    width: 700px;
+}
+}
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 0px solid #e5e5e5;
+}
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+<!-- header start here-->
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<div id="logo">
+					<a href="index.html"><img class="img-responsive" src="images/logomobile.png" alt="logo" width="77px" /></a>
+				</div>
+			</div>
+				
+			<div class="col-md-6 col-sm-6 col-xs-12 paddleft">
+				<!-- menu start here -->
+				<div id="menu">	
+					<nav class="navbar">
+						<div class="navbar-header">
+							<!--<span class="menutext visible-xs">Menu</span>-->
+							<button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="btn btn-navbar navbar-toggle" type="button"><i class="icofont icofont-navigation-menu"></i></button>
+						</div>
+						<div class="collapse navbar-collapse navbar-ex1-collapse padd0">
+							<ul class="nav navbar-nav text-right">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="aboutus.html">About us</a></li>
+                                <li><a href="tap.html">Our Ecosystem</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+								<li class="venuesbtn"><a href="signup.html">Venues – Sign Up</a></li>
+								<li class="venuesbtn"><a href="sign_in.html">Sign in</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<!-- menu end here -->
+				
+			</div>
+			
+			<div class="col-md-3 col-sm-3 col-xs-12 button-top paddleft">
+				<button class="btn-primary" type="button" onclick="location.href='signup.html'">Venues – Sign Up </button>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- header end here -->
+
+
+
+
+
+<!-- menu start here -->
+<div class="menu maintop">
+	<div class="container">
+		<div class="row ">
+			<div class="col-sm-12 col-xs-12 commontop text-center">
+				<h4 class="mobileorder">Order Now</h4>
+				<p class="mobilep">Food to pep up your Mood</p>
+				<hr class="mobileorder">
+			</div>
+			
+			
+			<div class="tab-pane col-md-12 col-sm-12 col-xs-12 ordermobile"  id="tab-payment">
+						<div class="row ">
+							<div class="col-sm-12 col-xs-12 commontop text-center" style="margin-bottom:10px; margin-top:-5px;">
+								<img src="images/bannermain.jpg" alt="image" title="image" class="img-responsive" />
+							</div>
+						</div>
+						<form class="form-horizontal" method="post">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							  <div class="panel panel-default" style="margin-bottom:10px">
+								<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									<div class="panel-heading panel-headingbg" role="tab" id="headingOne">
+									  <h4 class="panel-title panel-titleoz">		
+										  <span class="a-text-bold">Starters</span>
+									  </h4>
+									</div>
+								</a>
+								<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								  <div class="panel-body">
+									<div class="row">
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/HarissaPrawns.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Harissa Prawns</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/ChickenWings.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Chicken Wings</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/ThreeCheepDips.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Three Cheep Dips</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/SaltwaterCalamari.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Salt water Calamari</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/BeetrootCarpaccio.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Beetroot Carpaccio</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/WinterToast.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Winter Toast</p>
+												</div>
+											</a>
+										</div>
+										
+									</div>
+									
+								  </div>
+								</div>
+							  </div>
+							  <div class="panel panel-default"  style="margin-bottom:10px">
+								<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									<div class="panel-heading panel-headingbg" role="tab" id="headingTwo">
+									  <h4 class="panel-title panel-titleoz">		
+										  <span class="a-text-bold">Sides</span>
+									  </h4>
+									</div>
+								</a>
+								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								  <div class="panel-body">
+									<div class="row">
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/RoastedCorn.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Roasted Corn</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/Salad.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Salad</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/MixedBeans.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Mixed Beans</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/SmokedMapleCarrot.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Smoked Maple Carrot</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/CrispyChips.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Crispy Chips</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/Mash.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Mash</p>
+												</div>
+											</a>
+										</div>
+										
+									</div>
+									
+								  </div>
+								</div>
+							  </div>
+							  
+							  
+							  <div class="panel panel-default"  style="margin-bottom:10px">
+								<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									<div class="panel-heading panel-headingbg" role="tab" id="headingThree">
+									  <h4 class="panel-title panel-titleoz">		
+										  <span class="a-text-bold">Charcoal Roasted Skewers</span>
+									  </h4>
+									</div>
+								</a>
+								<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								  <div class="panel-body">
+									<div class="row">
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/RotisserieChickenThigh.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Rotisserie Chicken Thigh</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/HoneyGlazedPorkBelly.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Honey Glazed Pork Belly</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/SmokedPrawns.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Smoked Prawns</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/LambRumpCap.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Lamb Rump Cap</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/Garlic&RosemaryWagyu.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Garlic & Rosemary Wagyu</p>
+												</div>
+											</a>
+										</div>
+										
+									</div>
+									
+								  </div>
+								</div>
+							  </div>
+							  
+							  
+							  
+							  <div class="panel panel-default"  style="margin-bottom:10px">
+								<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									<div class="panel-heading panel-headingbg" role="tab" id="headingFour">
+									  <h4 class="panel-title panel-titleoz">		
+										  <span class="a-text-bold">Sauces</span>
+									  </h4>
+									</div>
+								</a>
+								<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+								  <div class="panel-body">
+									<div class="row">
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/TruffleButter.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Truffle Butter</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/Jus.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Jus</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/MushroomPeppercorn.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Mushroom, Peppercorn</p>
+												</div>
+											</a>
+										</div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							  
+							  
+							  <div class="panel panel-default"  style="margin-bottom:10px">
+								<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+									<div class="panel-heading panel-headingbg" role="tab" id="headingFive">
+									  <h4 class="panel-title panel-titleoz">		
+										  <span class="a-text-bold">Hearty Mains</span>
+									  </h4>
+									</div>
+								</a>
+								<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+								  <div class="panel-body">
+									<div class="row">
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/Burger.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Burger</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/AsadoRibs.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Asado Ribs</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/WagyuPie.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Wagyu Pie</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/RoastedPumpkin.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Roasted Pumpkin</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/FlamedChicken&Chips.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Flamed Chicken & Chips</p>
+												</div>
+											</a>
+										</div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							  
+							  
+							  <div class="panel panel-default"  style="margin-bottom:10px">
+								<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+									<div class="panel-heading panel-headingbg" role="tab" id="headingSix">
+									  <h4 class="panel-title panel-titleoz">		
+										  <span class="a-text-bold">Dessert</span>
+									  </h4>
+									</div>
+								</a>
+								<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+								  <div class="panel-body">
+									<div class="row">
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/CoconutPannaCotta.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Coconut Panna Cotta</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/FiredChocolate.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Fired Chocolate S’More</p>
+												</div>
+											</a>
+										</div>
+										<div class="col-md-3 col-sm-6 col-xs-6">
+											<a href="order_details.html" class="shadow-sm rounded">
+												<div class="shadow-sm rounded namebox">
+													<img src="images/starters/LemonTart.jpg" alt="image" title="image" class="img-responsive rounded" />
+													<p class="nameitem">Lemon Tart</p>
+												</div>
+											</a>
+										</div>
+
+									</div>
+								  </div>
+								</div>
+							  </div>
+							  
+							  
+							  
+							</div>
+							</form>
+							</div>
+			
+			
+			
+			
+			
+			
+			<div class="col-sm-12 col-xs-12 orderdesktop">
+
+				
+
+				<ul class="nav nav-tabs list-inline">
+					<li class="active">
+						<a href="#starters" data-toggle="tab" aria-expanded="true"><i class="icofont icofont-chicken"></i> Starters</a>
+					</li>
+					<li class="">
+						<a href="#sides" data-toggle="tab" aria-expanded="false"><i class="icofont icofont-spoon-and-fork"></i> Sides</a>
+					</li>
+					<li class="">
+						<a href="#charcoal" data-toggle="tab" aria-expanded="false"><i class="icofont icofont-restaurant"></i> Charcoal Roasted Skewers</a>
+					</li>
+					<li class="">
+						<a href="#sauces" data-toggle="tab" aria-expanded="false"><i class="icofont icofont-fast-food"></i> Sauces</a>
+					</li>
+					<li class="">
+						<a href="#heartymains" data-toggle="tab" aria-expanded="false"><i class="icofont icofont-burger"></i> Hearty Mains</a>
+					</li>
+					<li class="">
+						<a href="#dessert" data-toggle="tab" aria-expanded="false"><i class="icofont icofont-pie"></i> Dessert</a>
+					</li>
+				</ul>
+				<div  class="tab-content">
+					<div class="tab-pane active" id="starters">
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<a href="order_details.html"><img src="images/starters/HarissaPrawns.jpg" alt="image" title="image" class="img-responsive" /></a>
+									</div>
+									<div class="caption">
+										<a href="order_details.html"><h4>Harissa Prawns</h4></a>
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#" style="text-decoration:none;" data-toggle="modal" data-target="#myModal"><i class="icofont icofont-ui-messaging"></i></a> 
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/ChickenWings.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Chicken Wings</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/ThreeCheepDips.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Three Cheep Dips</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/SaltwaterCalamari.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Salt water Calamari</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/BeetrootCarpaccio.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Beetroot Carpaccio</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/WinterToast.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Winter Toast</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="tab-pane" id="sides">
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/RoastedCorn.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Roasted Corn</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Salad.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Salad</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/MixedBeans.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Mixed Beans</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/SmokedMapleCarrot.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Smoked Maple Carrot</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/CrispyChips.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Crispy Chips</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Mash.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Mash</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="tab-pane" id="charcoal">
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/RotisserieChickenThigh.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Rotisserie Chicken Thigh</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/HoneyGlazedPorkBelly.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Honey Glazed Pork Belly</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/SmokedPrawns.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Smoked Prawns</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/LambRumpCap.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Lamb Rump Cap</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Garlic&RosemaryWagyu.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Garlic & Rosemary Wagyu</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="sauces">
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/TruffleButter.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Truffle Butter</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/MushroomPeppercorn.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Mushroom, Peppercorn</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Jus.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Jus</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="tab-pane" id="heartymains">
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Burger.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Burger</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/AsadoRibs.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Asado Ribs</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/WagyuPie.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Wagyu Pie</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/RoastedPumpkin.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Roasted Pumpkin</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/FlamedChicken&Chips.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Flamed Chicken & Chips</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					
+					<div class="tab-pane" id="dessert">
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/CoconutPannaCotta.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Coconut Panna Cotta</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/FiredChocolate.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Fired Chocolate S’More</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/LemonTart.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Lemon Tart</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				<div class="text-left" style="background:#fcfeff; padding:10px;">
+					<div class="row">
+						<div class="col-sm-12 col-xs-12 commontop text-center">
+							<h4>Your Last Order</h4>
+							<hr>
+						</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 content">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/TruffleButter.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Truffle Butter</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 content">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/MushroomPeppercorn.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Mushroom, Peppercorn</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 content">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Jus.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Jus</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 content">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Jus.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Jus</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 content">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Jus.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Jus</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 content">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Jus.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Jus</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 content">
+								<diV class="box">
+									<div class="image">
+										<img src="images/starters/Jus.jpg" alt="image" title="image" class="img-responsive" />
+									</div>
+									<div class="caption">
+										<h4>Jus</h4>
+										
+										<div class="price">$35.00</div>
+										<div class="icon text-right">
+											<a href="#"><i class="icofont icofont-ui-messaging"></i></a>
+											<a href="#"><i class="icofont icofont-cart-alt"></i></a>
+											<a href="#"><i class="icofont icofont-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+						<button type="button" id="loadMore" class="btn-primary">Load More <i class="icofont icofont-curved-double-right"></i></button>
+				</div>	
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu end here -->
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" style="width:90% !important;">
+		<div class="modal-content">
+			<div class="modal-header" style="background:#01b0f1; color:#fff;">
+				<h5 class="modal-title" id="exampleModalLongTitle">About Food</h5>
+				<button type="button" class="close" style="margin-top: -20px;" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<!--<button type="button" class="close" data-dismiss="modal">&times;</button>	-->
+			<div class="modal-body" style="padding-bottom: 0px;">  
+				<input name="name" value="" placeholder="Enter Message" id="input-name" class="form-control inputpop" type="text">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn1 btn-secondary" data-dismiss="modal" style="padding: 5px 15px;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;">Close</button>
+				<button type="button" class="btn1 btn-secondary" style="background:#01b0f1; color:#fff;">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- newsletter start here -->
+<div id="newsletter">
+	<div class="container">
+		<div class="row">
+			<div id="subscribe">
+				<form class="form-horizontal" name="subscribe">
+					<div class="col-sm-7"> 
+						<div class="input-group">
+							<span class="news">newsletter</span>
+							<p class="footermobile">To get a copy of our Newsletter, please share your email address.</p>
+						</div>
+					</div>
+					<div class="col-sm-5 form-group">
+						<div class="input-group">
+							<input  value="" name="subscribe_email" id="subscribe_email" placeholder="Email" type="text">
+							<button class="btn btn-news" type="submit" value="submit">Send</button>
+						</div>
+					</div>
+				</form>
+			</div> 
+		</div>
+	</div>
+</div>
+<!-- newsletter end here -->
+
+
+<!-- footer start here -->
+<footer>
+	<div class="container">
+		<div class="row inner footercenter">
+			<div class="col-sm-3 footermobile">
+				<h4><img src="images/oztaplogo.png" class="img-responsive" title="logo" alt="logo" width="120px"></h4>
+				<h4 style="color:#fff; font-weight:500;">Get Started now!</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">No need to download any App,<br> Now you can simply Tap</a></li>
+					<li><button type="button" class="btn-primary" onclick="location.href='index.html'" style="width: 85%;">Our Venue Partners <i class="icofont icofont-curved-double-right"></i></button></li>
+				</ul>
+			</div>
+			<div class="col-sm-3 footermobile">
+				<h5>Pages</h5>
+				<ul class="list-unstyled">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Tap & Order</a></li>
+					<li><a href="#">About us</a></li>
+                    <li><a href="#">Our Ecosystem</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3 footermobile">
+				<h5>Social Icons</h5>
+				<ul class="list-unstyled">
+					<li style="padding-top:20px;"> 
+						<i class="icofont icofont-facebook" style="font-size:30px; padding:10px"></i> 
+						<i class="icofont icofont-instagram" style="font-size:30px;  padding:10px"></i>
+					</li>
+					<li style="margin-top:20px;">
+						<i class="icofont icofont-linkedin" style="font-size:30px; padding:10px"></i>
+						<i class="icofont icofont-twitter" style="font-size:30px; padding:10px"></i>
+					</li >
+					<li style="margin-top:20px;">
+						<i class="icofont icofont-youtube" style="font-size:30px; padding:10px"></i>
+						<i class="icofont icofont-google-plus" style="font-size:30px; padding:10px"></i>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-3 footerSocial">
+				<h5>Social Icons</h5>
+				<ul class="list-unstyled">
+					<li> 
+						<i class="icofont icofont-facebook" style="font-size:24px; padding:10px"></i> 
+						<i class="icofont icofont-instagram" style="font-size:24px;  padding:10px"></i>
+						<i class="icofont icofont-linkedin" style="font-size:24px; padding:10px"></i>
+						<i class="icofont icofont-twitter" style="font-size:24px; padding:10px"></i>
+						<i class="icofont icofont-youtube" style="font-size:24px; padding:10px"></i>
+						<i class="icofont icofont-google-plus" style="font-size:24px; padding:10px"></i>
+					</li>
+					<li>
+						<a href="#"><i class="icofont icofont-phone footericon"></i> +(61) xxx xxx xxx</a>&nbsp; &nbsp; 
+						<a href="#"><i class="icofont icofont-ui-message footericon"></i> info@oztap.com</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-3 footermobile">
+				<h5>Information</h5>
+				<ul class="list-unstyled contact">
+					<li><a href="#"><i class="icofont icofont-map footericon"></i> 1234, xxxxxxxxx, xxxxxxxx, Perth, Australia</a></li>
+					<li><a href="#"><i class="icofont icofont-phone footericon"></i> +(61) xxx xxx xxx</a></li>
+					<li><a href="#"><i class="icofont icofont-ui-message footericon"></i> info@oztap.com</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row powered">
+			<div class="col-sm-12">
+				<hr>
+			</div>
+			<!--<div class="col-sm-3">
+				<img src="images/logo.png" class="img-responsive" title="logo" alt="logo" width="130px">
+			</div>-->
+			<div class="col-sm-12 text-center">
+				<p>Copyright © <span>OZTAP</span> 2023. All Rights Reserved.</p>
+			</div>
+			<!--<div class="col-sm-3 text-right">
+				<ul class="list-inline social">
+					<li><a href="#" target="_blank"><i class="icofont icofont-social-facebook"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icofont icofont-social-twitter"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icofont icofont-social-google-plus"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icofont icofont-social-pinterest"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icofont icofont-social-instagram"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icofont icofont-social-youtube-play"></i></a></li>
+				</ul>
+			</div> -->
+		</div>
+	</div>
+</footer>
+
+
+<!--  18 or above  
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Info box</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p>This is done totally without JavaScript. Just HTML and CSS.</p>
+		</div>
+	</div>
+</div>--->
+
+<div id="myModalload" class="modal fade in" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <!--<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>-->
+      <div class="modal-body">
+		<h3 style="font-size:30px; color:#01b0f1; font-weight:bold;">Are you over 18?</h3>
+        <p class="proofofage">OZTAP requires you to comfirm your age before ordering. Venue staff may request proof of age.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default fullbtn" data-dismiss="modal">I am over 18</button>
+		<button type="button" class="btn btn-default fullbtn1" data-dismiss="modal">No, I am underage</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- footer end here -->
+<!-- jquery -->
+<script src="js/jquery.2.1.1.min.js" type="text/javascript"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<!--bootstrap select-->
+<script src="js/bootstrap-select.js" type="text/javascript"></script>
+<!--internal js-->
+<script src="js/internal.js" type="text/javascript"></script>
+<!-- owlcarousel js -->
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<!--Gallery js code-->
+<script src="js/photo-gallery.js" type="text/javascript"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115890069-7');
+  
+  
+  $(document).ready(function(){
+  $(".content").slice(0, 3).show();
+  $("#loadMore").on("click", function(e){
+    e.preventDefault();
+    $(".content:hidden").slice(0, 3).slideDown();
+    if($(".content:hidden").length == 0) {
+      $("#loadMore").text("").addClass("noContent");
+    }
+  });
+  
+})
+
+
+/*
+$(window).load(function(){        
+   $('#myModalload').modal('show');
+}); 	*/
+	
+</script>
+
+</body>
+</html>
